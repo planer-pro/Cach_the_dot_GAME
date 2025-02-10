@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "author": "Planerful",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-a4988", "id": "drv1", "top": -187.2, "left": -24, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 102.2,
+      "left": -9.6,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 102.2,
+      "left": 96,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": -351.59,
+      "left": 86.83,
+      "attrs": { "size": "17" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -104.84, "left": 124.8, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -96, "left": 47.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": 172.8, "left": -19.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "gnd1:GND", "drv1:GND.1", "black", [ "v0" ] ],
+    [ "stepper1:B-", "drv1:1B", "green", [ "v0" ] ],
+    [ "stepper1:B+", "drv1:1A", "green", [ "v0" ] ],
+    [ "drv1:2A", "stepper1:A+", "green", [ "h0" ] ],
+    [ "drv1:2B", "stepper1:A-", "green", [ "h0" ] ],
+    [ "drv1:GND.2", "gnd1:GND", "black", [ "h0" ] ],
+    [ "drv1:STEP", "nano:2", "green", [ "h-28.8", "v96", "h163.2" ] ],
+    [ "drv1:DIR", "nano:3", "green", [ "h-19.2", "v96", "h144" ] ],
+    [ "btn1:2.l", "btn2:2.l", "green", [ "h0", "v29", "h105.6" ] ],
+    [ "gnd2:GND", "btn1:2.l", "black", [ "v0" ] ],
+    [ "drv1:SLEEP", "drv1:RESET", "green", [ "h-19.2", "v-9.6" ] ],
+    [ "drv1:VDD", "vcc1:VCC", "green", [ "h76.95", "v57.68", "h28.8" ] ],
+    [ "btn1:1.l", "nano:4", "green", [ "h-9.6", "v-153.6", "h115.2" ] ],
+    [ "btn2:1.l", "nano:5", "green", [ "h-9.6", "v-19.2", "h-115.2", "v-144", "h115.2" ] ]
+  ],
+  "dependencies": {}
+}
