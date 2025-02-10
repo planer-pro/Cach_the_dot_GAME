@@ -13,9 +13,9 @@ A white light runs back and forth on an LED strip. There is also a blue game LED
 ### Русский
 1. Таймаут игры (к примеру, 3 секунды), за которые нужно уложиться и споймать бегающий светодиод, иначе засчитывается проигрыш раунда.
 2. Общее число раундов, после которых считается, что ты окончательно выиграл игру.
-3. Вывод единицы на выход микроконтроллера в случае выигрыша для подключения внешних исполнительных устройств (замков, сейфов, выдачи конфет и так далее).
+3. Вывод единицы на выход микроконтроллера в случае выигрыша для подключения внешних исполнительных устройств (замков, сейфов, выдачи конфет, презервативов, и так далее).
 
 ### English
 1. A game timeout (e.g., 3 seconds) within which you must catch the running LED; otherwise, the round is counted as a loss.
 2. A total number of rounds after which you are considered to have won the game.
-3. Outputting a high signal from the microcontroller in case of a win to connect external devices (locks, safes, candy dispensers, etc.).
+3. Outputting a high signal from the microcontroller in case of a win to connect external devices (locks, safes, candy dispensers, condoms, etc.).
